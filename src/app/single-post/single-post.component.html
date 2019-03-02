@@ -1,0 +1,13 @@
+<div *ngIf="post" class="card container">
+  <div class="col-md-4 post-img">
+    <img src="{{post.fimg_url}}">
+  </div>
+  <h3>{{post.title.rendered}}</h3>
+  <p>{{post.acf.short_description}}</p>
+  <a href="{{post.link}}" class="xs-primary">go to link</a>
+    
+    {{post.dangerousVideoUrl}}
+    <div>
+      {{post.acf.server_1}}
+    </div>
+  </div>

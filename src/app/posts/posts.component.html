@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row post mx-auto" *ngFor ="let post of posts">
+    <div class="col-md-4 post-img">
+      <img matCardImage [src]="post['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['movie-post-size'].source_url">
+    </div>
+    <div class="col-md-6 post-info">
+      <h2 class="post-info-title">{{post.title.rendered}}</h2>
+      <p class="post-info-body">{{post.acf.short_description}}</p>
+      <button class="post-info-button" (click)="singlePost(post.id)">Read more <i class="fa fa-read"></i></button>
+      <button class="post-info-button" (click)="removePost(post)" class="btn btn-danger">Remove <i class="fa fa-read"></i></button>
+    </div>
+  </div>
+</div>
